@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Política de seguridad: solo permite recursos propios y las fuentes de Google -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'none'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#A64F3C">
+    <meta name="description" content="Escríbenos para cotizar tu prenda a medida o tus arreglos.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:title" content="Contacto | Hilos & Estilos">
+    <meta property="og:description" content="Escríbenos para cotizar tu prenda a medida o tus arreglos.">
+    <meta property="og:image" content="assetes/imagenes/maquina.jpg">
+    <meta name="robots" content="index, follow">
+    <title>Contacto | Hilos & Estilos</title>
+    <link rel="icon" href="assetes/imagenes/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="assetes/estilos/style.css">
+</head>
+<body>
+    <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+    <div id="header"></div>
+
+    <main id="contenido">
+        <section class="cabecera-pagina">
+            <h1>Contacto</h1>
+            <p>Cuéntanos qué necesitas y te responderemos a la brevedad.</p>
+        </section>
+        <section class="seccion">
+            <div class="contenedor contacto-grid">
+                <div class="info-contacto aparecer">
+                    <h3>Hablemos de tu próxima prenda</h3>
+                    <p>Ya sea un vestido para una ocasión especial, un diseño a medida o un simple arreglo, estamos para ayudarte.</p>
+                    <ul id="datos-contacto">
+                        <li><span aria-hidden="true">✂️</span><span>Diseño y confección a medida</span></li>
+                        <li><span aria-hidden="true">🧵</span><span>Arreglos y ajustes</span></li>
+                        <li><span aria-hidden="true">💬</span><span>Cotización sin compromiso</span></li>
+                    </ul>
+                </div>
+
+                <form class="formulario aparecer" id="form-contacto" novalidate autocomplete="on" method="post">
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" maxlength="80" autocomplete="name" required aria-describedby="error-nombre">
+                        <span class="error-campo" id="error-nombre" role="alert"></span>
+                    </div>
+                    <div class="campo">
+                        <label for="correo">Correo</label>
+                        <input type="email" id="correo" name="correo" maxlength="120" autocomplete="email" required aria-describedby="error-correo">
+                        <span class="error-campo" id="error-correo" role="alert"></span>
+                    </div>
+                    <div class="campo">
+                        <label for="asunto">Asunto</label>
+                        <select id="asunto" name="asunto">
+                            <option value="Cotización">Cotización</option>
+                            <option value="Arreglos">Arreglos</option>
+                            <option value="Consulta">Consulta general</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" maxlength="1000" required aria-describedby="error-mensaje"></textarea>
+                        <span class="contador" id="contador">0 / 1000</span>
+                        <span class="error-campo" id="error-mensaje" role="alert"></span>
+                    </div>
+                    <!-- Campo trampa anti-spam (los robots lo llenan, las personas no lo ven) -->
+                    <div class="campo-trampa" aria-hidden="true">
+                        <label for="sitio_web">No completar</label>
+                        <input type="text" id="sitio_web" name="sitio_web" tabindex="-1" autocomplete="off">
+                    </div>
+                    <button class="btn" type="submit">Enviar mensaje</button>
+                    <div class="mensaje-estado" id="estado-form" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

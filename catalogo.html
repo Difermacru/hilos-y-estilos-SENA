@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Política de seguridad: solo permite recursos propios y las fuentes de Google -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'none'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#A64F3C">
+    <meta name="description" content="Catálogo de vestidos, diseño a medida y arreglos de Hilos & Estilos.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:title" content="Catálogo | Hilos & Estilos">
+    <meta property="og:description" content="Catálogo de vestidos, diseño a medida y arreglos de Hilos & Estilos.">
+    <meta property="og:image" content="assetes/imagenes/maquina.jpg">
+    <meta name="robots" content="index, follow">
+    <title>Catálogo | Hilos & Estilos</title>
+    <link rel="icon" href="assetes/imagenes/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="assetes/estilos/style.css">
+</head>
+<body>
+    <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+    <div id="header"></div>
+
+    <main id="contenido">
+        <section class="cabecera-pagina">
+            <h1>Catálogo de productos</h1>
+            <p>Conoce lo que podemos confeccionar para ti.</p>
+        </section>
+        <section class="seccion">
+            <div class="contenedor">
+                <div class="filtros" role="group" aria-label="Filtrar por categoría">
+                    <button class="filtro" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+                    <button class="filtro" type="button" data-filtro="vestidos" aria-pressed="false">Vestidos</button>
+                    <button class="filtro" type="button" data-filtro="medida" aria-pressed="false">A medida</button>
+                    <button class="filtro" type="button" data-filtro="arreglos" aria-pressed="false">Arreglos</button>
+                </div>
+                <div class="catalogo">
+                <article class="producto aparecer" data-categoria="vestidos">
+                    <div class="producto-img"><img src="assetes/imagenes/maniqui.jpg" alt="Vestido elegante" loading="lazy" width="600" height="450"></div>
+                    <div class="producto-cuerpo">
+                        <p class="categoria">Vestidos</p>
+                        <h3>Vestido elegante</h3>
+                        <p>Confección personalizada para eventos y ocasiones especiales.</p>
+                        <a class="btn" href="contacto.html?asunto=Cotización">Consultar</a>
+                    </div>
+                </article>
+                <article class="producto aparecer" data-categoria="medida">
+                    <div class="producto-img"><img src="assetes/imagenes/maquina.jpg" alt="Diseño a medida" loading="lazy" width="600" height="450"></div>
+                    <div class="producto-cuerpo">
+                        <p class="categoria">A medida</p>
+                        <h3>Diseño a medida</h3>
+                        <p>Prendas exclusivas creadas desde cero según tus gustos.</p>
+                        <a class="btn" href="contacto.html?asunto=Cotización">Consultar</a>
+                    </div>
+                </article>
+                <article class="producto aparecer" data-categoria="arreglos">
+                    <div class="producto-img"><div class="producto-icono" aria-hidden="true">🧵</div></div>
+                    <div class="producto-cuerpo">
+                        <p class="categoria">Arreglos</p>
+                        <h3>Ajustes y arreglos</h3>
+                        <p>Bastas, entalles y reparaciones con terminación prolija.</p>
+                        <a class="btn" href="contacto.html?asunto=Arreglos">Consultar</a>
+                    </div>
+                </article>
+                <article class="producto aparecer" data-categoria="medida">
+                    <div class="producto-img"><div class="producto-icono" aria-hidden="true">📏</div></div>
+                    <div class="producto-cuerpo">
+                        <p class="categoria">A medida</p>
+                        <h3>Trajes y conjuntos</h3>
+                        <p>Calce perfecto con medición personalizada.</p>
+                        <a class="btn" href="contacto.html?asunto=Cotización">Consultar</a>
+                    </div>
+                </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
